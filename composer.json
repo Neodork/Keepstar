@@ -28,6 +28,7 @@
     "twig/extensions": "1.3.*",
     "filp/whoops": "~1.1.10",
     "restcord/restcord": "dev-master",
-    "monolog/monolog": "1.x-dev"
+    "monolog/monolog": "1.x-dev",
+    "guzzlehttp/guzzle": "~6.0"
   }
 }
