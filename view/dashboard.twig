@@ -67,7 +67,7 @@
     .jumbotron .btn {
       font-size: 21px;
       padding: 14px 24px;
-      color: #0D191D;
+      /*color: #0D191D;*/
     }
 
     /* Supporting marketing content */
@@ -106,12 +106,12 @@
     <ul class="nav nav-pills pull-right"></ul>
   </div>
   <div class="jumbotron">
-    <img src="{{ image }}" class="img-rounded">
+    <img src="{{ image }}" class="img-rounded" style="max-width: 128px;"/>
     <h1>{{ name }}</h1>
     <h3>{{ corp }}</h3>
     <p class="lead">Choose your desired action below.</p>
     <p>
-      <a class="btn btn-outline-primary btn-sm" href="/discord/" role="button">Get Discord Roles</a>
+      <a class="btn btn-default btn-sm" href="/discord/" role="button">Get Discord Roles</a>
     </p>
     {% if config['teamspeak']['enabled'] %}
       <script type="text/javascript">

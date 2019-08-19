@@ -2,10 +2,7 @@
 
 require_once("../app.php");
 echo "<footer>
-    <!--Copyright-->
     <div class='footer-copyright py-3 text-center'>
-        <i><a href='https://github.com/shibdib/Keepstar'> Keepstar Auth V. 1.2</a></i>
+       <img src=\"/img/trc.png\" style=\"max-width: 64px;\"/><i>T.R.C Authentication - Director: Aeros Ranger</i>
     </div>
-    <!--/.Copyright-->
-</footer>
-<!--/.Footer-->";
+</footer>";
