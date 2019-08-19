@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1dd1f4c9c30d956adca54266a68492b2",
+    "content-hash": "97b13d61650df5e6faa0704366db1dea",
     "packages": [
         {
             "name": "filp/whoops",
@@ -627,16 +627,16 @@
         },
         {
             "name": "restcord/restcord",
-            "version": "dev-master",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/restcord/restcord.git",
-                "reference": "2e332138428a91fbcc70630c324aa5a449c11b01"
+                "reference": "53f49ea5d16fc2df624b8b9cffd758a2a7103703"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/restcord/restcord/zipball/2e332138428a91fbcc70630c324aa5a449c11b01",
-                "reference": "2e332138428a91fbcc70630c324aa5a449c11b01",
+                "url": "https://api.github.com/repos/restcord/restcord/zipball/53f49ea5d16fc2df624b8b9cffd758a2a7103703",
+                "reference": "53f49ea5d16fc2df624b8b9cffd758a2a7103703",
                 "shasum": ""
             },
             "require": {
@@ -673,7 +673,7 @@
                 }
             ],
             "description": "REST Library for the Discord API",
-            "time": "2019-08-08T23:33:12+00:00"
+            "time": "2019-08-08T23:34:38+00:00"
         },
         {
             "name": "slim/slim",
