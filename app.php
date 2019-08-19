@@ -402,50 +402,6 @@ $app->get('/discord/', function () use ($app, $config, $log) {
     }
 });
 
-// Ping module
-$app->get('/ping/', function () use ($app, $config, $log) {
-    if (isset($_GET['message'])) {
-        $restcord = new DiscordClient([
-            'token' => $config['discord']['botToken']
-        ]);
-        $data = $_SESSION['eveData'];
-        $characterID = $data->CharacterID;
-        $characterData = characterDetails($characterID);
-        $characterName = $characterData['name'];
-        $content = '';
-        if (isset($_GET['everyone'])) {
-            $content = '@everyone';
-        }
-        $restcord->channel->createMessage([
-            'channel.id' => (int)$_GET['channel'],
-            'content' => $content,
-            'embed' => [
-                'title' => 'Incoming Ping',
-                'description' => 'Ping From: ' . $characterName,
-                'color' => 14290439,
-                'footer' => [
-                    'icon_url' => 'https://webimg.ccpgamescdn.com/kvd74o0q2fjg/1M08UMgc7y8u6sQcikSuqk/6ef1923a91e38e800fb3bfca575a23c0/UPDATES_PALATINE.png_w=1280&fm=jpg',
-                    'text' => $config['pings']['append']
-                ],
-                'thumbnail' => [
-                    'url' => 'https://image.eveonline.com/Character/' . $characterID . '_32.jpg'
-                ],
-                'fields' => [
-                    [
-                        'name' => '-',
-                        'value' => $_GET['message']
-                    ]
-                ]
-            ]
-        ]);
-        echo "<head><meta http-equiv='refresh' content='0; url=/auth/' /></head>";
-        return;
-    }
-    $app->render('ping.twig', [
-        'config' => $config
-    ]);
-});
-
 $app->run();
 
 /**
