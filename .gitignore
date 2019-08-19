@@ -4,3 +4,5 @@ cache/
 config.php
 config/database/auth.sqlite
 /nbproject/
+/log/
+*.DS_Store
