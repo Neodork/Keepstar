@@ -3,127 +3,127 @@
 <html>
 
 <head>
-    <title>Discord Authenticator</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        var delete_cookie = function (name) {
-            document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-        };
-        delete_cookie('eveCode');
-    </script>
-    <style type="text/css">
-        /* Space out content a bit */
-        body {
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
+  <title>Discord Authenticator</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+      var delete_cookie = function (name) {
+          document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+      };
+      delete_cookie('eveCode');
+  </script>
+  <style type="text/css">
+    /* Space out content a bit */
+    body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
 
-        /* Everything but the jumbotron gets side spacing for mobile first views */
-        .header, .marketing, .footer {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
+    /* Everything but the jumbotron gets side spacing for mobile first views */
+    .header, .marketing, .footer {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 
-        /* Custom page header */
-        .header {
-            border-bottom: 1px solid #e5e5e5;
-        }
+    /* Custom page header */
+    .header {
+      border-bottom: 1px solid #e5e5e5;
+    }
 
-        /* Make the masthead heading the same height as the navigation */
-        .header h3 {
-            margin-top: 0;
-            margin-bottom: 0;
-            line-height: 40px;
-            padding-bottom: 19px;
-        }
+    /* Make the masthead heading the same height as the navigation */
+    .header h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 40px;
+      padding-bottom: 19px;
+    }
 
-        /* Custom page footer */
-        .footer {
-            padding-top: 19px;
-            color: #777;
-            border-top: 1px solid #e5e5e5;
-        }
+    /* Custom page footer */
+    .footer {
+      padding-top: 19px;
+      color: #777;
+      border-top: 1px solid #e5e5e5;
+    }
 
-        /* Customize container */
-        @media (min-width: 768px) {
-            .container {
-                max-width: 730px;
-            }
-        }
+    /* Customize container */
+    @media (min-width: 768px) {
+      .container {
+        max-width: 730px;
+      }
+    }
 
-        .container-narrow > hr {
-            margin: 30px 0;
-        }
+    .container-narrow > hr {
+      margin: 30px 0;
+    }
 
-        /* Main marketing message and sign up button */
-        .jumbotron {
-            text-align: center;
-            border-bottom: 1px solid #e5e5e5;
-        }
+    /* Main marketing message and sign up button */
+    .jumbotron {
+      text-align: center;
+      border-bottom: 1px solid #e5e5e5;
+    }
 
-        .jumbotron .btn {
-            font-size: 21px;
-            padding: 14px 24px;
-            color: #0D191D;
-        }
+    .jumbotron .btn {
+      font-size: 21px;
+      padding: 14px 24px;
+      color: #0D191D;
+    }
 
-        /* Supporting marketing content */
-        .marketing {
-            margin: 40px 0;
-        }
+    /* Supporting marketing content */
+    .marketing {
+      margin: 40px 0;
+    }
 
-        .marketing p + h4 {
-            margin-top: 28px;
-        }
+    .marketing p + h4 {
+      margin-top: 28px;
+    }
 
-        /* Responsive: Portrait tablets and up */
-        @media screen and(min-width: 768px) {
-            /* Remove the padding we set earlier */
-            .header, .marketing, .footer {
-                padding-left: 0;
-                padding-right: 0;
-            }
+    /* Responsive: Portrait tablets and up */
+    @media screen and(min-width: 768px) {
+      /* Remove the padding we set earlier */
+      .header, .marketing, .footer {
+        padding-left: 0;
+        padding-right: 0;
+      }
 
-            /* Space out the masthead */
-            .header {
-                margin-bottom: 30px;
-            }
+      /* Space out the masthead */
+      .header {
+        margin-bottom: 30px;
+      }
 
-            /* Remove the bottom border on the jumbotron for visual effect */
-            .jumbotron {
-                border-bottom: 0;
-            }
-        }
-    </style>
+      /* Remove the bottom border on the jumbotron for visual effect */
+      .jumbotron {
+        border-bottom: 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
 <div class="container">
-    <div class="header">
-        <ul class="nav nav-pills pull-right"></ul>
-    </div>
-    <div class="jumbotron">
-        <img src="{{ image }}" class="img-rounded">
-        <h1>{{ name }}</h1>
-        <h3>{{ corp }}</h3>
-        <p class="lead">Choose your desired action below.</p>
-        <p>
-            <a class="btn btn-outline-primary btn-sm" href="/discord/" role="button">Get Discord Roles</a>
-        </p>
-        <script type="text/javascript">
-            if ({{ config['teamspeak']['enabled'] }}) {
-                document.write('<p><a class="btn btn-outline-primary btn-sm" href="/teamspeak/" role="button">Get Teamspeak Roles</a></p>');
-            }
-        </script>
-        <script type="text/javascript">
-            if ({{ canPing }}) {
-                document.write('<p><a class="btn btn-outline-primary btn-sm" href="/ping/" role="button">Send a Ping</a></p>');
-            }
-        </script>
-    </div>
+  <div class="header">
+    <ul class="nav nav-pills pull-right"></ul>
+  </div>
+  <div class="jumbotron">
+    <img src="{{ image }}" class="img-rounded">
+    <h1>{{ name }}</h1>
+    <h3>{{ corp }}</h3>
+    <p class="lead">Choose your desired action below.</p>
+    <p>
+      <a class="btn btn-outline-primary btn-sm" href="/discord/" role="button">Get Discord Roles</a>
+    </p>
+    {% if config['teamspeak']['enabled'] %}
+      <script type="text/javascript">
+          document.write('<p><a class="btn btn-outline-primary btn-sm" href="/teamspeak/" role="button">Get Teamspeak Roles</a></p>');
+      </script>
+    {% endif %}
+    {% if canPing %}
+      <script type="text/javascript">
+          document.write('<p><a class="btn btn-outline-primary btn-sm" href="/ping/" role="button">Send a Ping</a></p>');
+      </script>
+    {% endif %}
+  </div>
 </div>
 <!-- /container -->
 </body>
