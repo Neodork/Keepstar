@@ -376,6 +376,12 @@ $app->get('/discord/', function () use ($app, $config, $log) {
                 $access[] = 'corp';
                 continue;
             }
+
+          if ($eveName !== null && $role !== null) {
+              $log->notice("$eveName has been added to the role $role->name.");
+            } elseif($characterID !== null && $role !== null){
+              $log->notice("$characterID has been added to the role $role->name.");
+            }
         }
 
         // Make the json access list
@@ -392,7 +398,6 @@ $app->get('/discord/', function () use ($app, $config, $log) {
         }
 
         if (count($access) > 0) {
-            if ($eveName !== null) {$log->notice("$eveName has been added to the role $role->name.");} else {$log->notice("$characterID has been added to the role $role->name.");}
             $_SESSION['discordCode'] = null;
             $app->render('authed.twig');
         } else {
